@@ -1,0 +1,15 @@
+{
+	"name": "poetry3-poetry-pyenv",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	"postCreateCommand": "poetry shell && poetry install",
+	"runArgs": ["--rm"],
+	"customizations": {
+        "vscode": {
+            "extensions":["ms-python.python", "njpwerner.autodocstring"]
+            },
+			"terminal.integrated.shell.linux": "/bin/zsh",
+        }
+}
